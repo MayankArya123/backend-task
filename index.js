@@ -21,7 +21,7 @@ app.use('',require('./Routes/user'))
 
 
 
-// const  port = 7000 
+const  port = 7000
 
-// app.listen(port,()=>console.log('server listening at port',port))
+app.listen(port,()=>console.log('json server listening at port',port))
 

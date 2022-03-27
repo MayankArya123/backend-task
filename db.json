@@ -1,17 +1,50 @@
 {
-    "todos": [
-      { "userId":"1", "id":1, "completed": "false" ,"title": "Post 1"},
-      { "userId":"2", "id":2, "completed": "false" ,"title": "Post 2"},
-      { "userId":"3", "id":3, "completed": "false" ,"title": "Post 3"}
-    ],
-    "users":[
-  
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 },
-      { "id": 2, "body": "some comment", "postId": 1 }
-    ],
-    "profile": {
-      "name": "typicode"
+  "todos": [
+    {
+      "userId": 1,
+      "title": "do pushups",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "title": "do pushups",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "title": "do pushups",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "title": "do chest workout",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "title": "do chest workout",
+      "completed": false,
+      "id": 5
     }
-  }
+  ],
+  "users": [
+    {
+      "name": "mayank arya",
+      "phone": "9981754674",
+      "email": "mayanksunny78600@gmail.com",
+      "todos": [],
+      "id": 1
+    },
+    {
+      "name": "sunny arya",
+      "phone": "9981754674",
+      "email": "mayanksunny78600@gmail.com",
+      "todos": [],
+      "id": 2
+    }
+  ]
+}

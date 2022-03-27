@@ -16,34 +16,10 @@ const router = new express.Router()
 
 router.get("/todos",async (req,res)=>{
 
-  console.log('todos route hitting')
-
   try{
-
-   const posts = await axios.get('https://my-json-server.typicode.com/MayankArya123/backend-task/posts')
-
-          console.log('posts ooooo',posts.data)
-
-    res.json(posts.data)
-
-
-
-  }
-  catch(err){
-
-    console.log('error',err)
-
-  }
-
-})
-
-
-router.post("/addUser", async (req, res) => {
-
-  try{
-    const posts = await axios.post('https://my-json-server.typicode.com/MayankArya123/backend-task/posts')
-     console.log('posts ooooo',posts.data)
-     res.json(posts.data)
+    const todos = await axios.post('https://my-json-server.typicode.com/MayankArya123/backend-task/todos')
+     console.log('posts ooooo',todos.data)
+     res.json(todos.data)
  
    }
    catch(err){
@@ -52,49 +28,66 @@ router.post("/addUser", async (req, res) => {
  
    }
 
-  // res.send('jjj')
 })
 
 
+// router.post("/addUser", async (req, res) => {
 
-router.post("/add/todo", async (req, res) => {
+//   try{
+//     const posts = await axios.post('https://my-json-server.typicode.com/MayankArya123/backend-task/posts')
+//      console.log('posts ooooo',posts.data)
+//      res.json(posts.data)
+ 
+//    }
+//    catch(err){
+ 
+//      console.log('error',err)
+ 
+//    }
 
-console.log('addtodo route hitting')
+//   // res.send('jjj')
+// })
 
-  const { userId,id,title} = req.body
 
-  const newTodo = new Todo({
-    userId:userId,
-    id:id,
-    title:title,
-  })
+
+// router.post("/add/todo", async (req, res) => {
+
+// console.log('addtodo route hitting')
+
+//   const { userId,id,title} = req.body
+
+//   const newTodo = new Todo({
+//     userId:userId,
+//     id:id,
+//     title:title,
+//   })
 
   
-  try {
-    const todo = await newTodo.save()
-    // const token = await user.getAuthToken()
-    console.log("dd", todo)
+//   try {
+//     const todo = await newTodo.save()
+//     // const token = await user.getAuthToken()
+//     console.log("dd", todo)
 
-    const user = await User.findOne({_id:userId})
+//     const user = await User.findOne({_id:userId})
 
-        if (!user) {
-          throw new Error("unable to find user")
-        }
+//         if (!user) {
+//           throw new Error("unable to find user")
+//         }
 
-        user.todos = user.todos.concat({ userId:userId,
-          id:id,
-          title:title})
+//         user.todos = user.todos.concat({ userId:userId,
+//           id:id,
+//           title:title})
 
-        await user.save()
+//         await user.save()
 
-    res.status(201).send({msg:'todo added'})
-  } catch (err) {
-    console.log("error", err)
-    res.status(400).send(err)
-  }
+//     res.status(201).send({msg:'todo added'})
+//   } catch (err) {
+//     console.log("error", err)
+//     res.status(400).send(err)
+//   }
 
-  // res.send('jjj')
-})
+//   // res.send('jjj')
+// })
 
 
 
