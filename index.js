@@ -13,5 +13,5 @@ app.use('',require('./Routes/todos'))
 
 const  port = 7000
 
-app.listen(port,()=>console.log('json server listening at port',port))
+app.listen(port,()=>console.log('server listening at port',port))
 
