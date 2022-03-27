@@ -1,0 +1,17 @@
+{
+    "todos": [
+      { "userId":"1", "id":1, "completed": "false" ,"title": "Post 1"},
+      { "userId":"2", "id":2, "completed": "false" ,"title": "Post 2"},
+      { "userId":"3", "id":3, "completed": "false" ,"title": "Post 3"}
+    ],
+    "users":[
+  
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 },
+      { "id": 2, "body": "some comment", "postId": 1 }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }
