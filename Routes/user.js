@@ -17,7 +17,7 @@ const router = new express.Router()
 router.get("/todos",async (req,res)=>{
 
   try{
-    const todos = await axios.post('https://my-json-server.typicode.com/MayankArya123/backend-task/todos')
+    const todos = await axios.get('https://my-json-server.typicode.com/MayankArya123/backend-task/todos')
      console.log('posts ooooo',todos.data)
      res.json(todos.data)
  
