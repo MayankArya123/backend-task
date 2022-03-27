@@ -20,6 +20,7 @@ router.get("/user",async (req,res)=>{
 
      console.log('todo',todos.data)
 
+     //addding all todos of user to todos property
       user.data.todos = todos.data
 
       console.log('user after',user)

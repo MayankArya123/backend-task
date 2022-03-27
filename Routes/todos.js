@@ -11,9 +11,9 @@ router.get("/todos",async (req,res)=>{
 
   try{
     const todos = await axios.get('https://my-json-server.typicode.com/MayankArya123/backend-task/todos')
-     console.log('posts ooooo',todos.data)
+     console.log('all todos',todos.data)
 
-     const FilteredTodos= todos.data.map((ET)=>{
+     const FilteredTodosByDeletingUserId= todos.data.map((ET)=>{
 
       return {
         title: ET.title,
@@ -23,7 +23,7 @@ router.get("/todos",async (req,res)=>{
 
      })
 
-     res.json(FilteredTodos)
+     res.json(FilteredTodosByDeletingUserId)
  
    }
    catch(err){
